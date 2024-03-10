@@ -1,7 +1,7 @@
 ## Repository praktikum algoritma dan struktur data
 
 <pre>
-Nama : Arvinanto Bahtiar
-NIM : 2211110014
-Kelas : S1SD03-A
+Nama : Olivia Intan Puspita
+NIM : 2311110006
+Kelas : S1SD-04-A
 </pre>
