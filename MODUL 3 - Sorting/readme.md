@@ -75,13 +75,17 @@ Program di atas merupakan program untuk mengurutkan sebuah array dari bilangan b
 
 Berikut adalah penjelasan dari program di atas:
 
-Untuk yang pertama yaitu fungsi bubble_sort yang merupakan fungsi untuk melakukan pengurutan array dari bilangan desimal. Fungsi ini menerima parameter sebuah array dari bilangan desimal (arr) dan panjang array (length). Selanjutnya Variabel boolean not_sorted diinisialisasi dengan nilai true untuk menunjukkan bahwa array belum diurutkan.
+Untuk yang pertama yaitu fungsi bubble_sort yang merupakan fungsi untuk melakukan pengurutan array dari bilangan desimal. Fungsi ini menerima parameter sebuah array dari bilangan desimal (arr) dan panjang array (length). Algoritma Bubble Sort memiliki kompleksitas waktu rata-rata O(n^2), di mana n adalah jumlah elemen dalam array. Di dalam fungsi ini, terdapat dua loop bersarang. Loop pertama memiliki kompleksitas O(n) karena ia melakukan iterasi sebanyak n kali, di mana n adalah panjang array.
+Di dalam loop pertama, terdapat loop kedua yang juga memiliki kompleksitas O(n), karena ia melakukan iterasi sebanyak (n - j) kali di setiap iterasi loop pertama, di mana j adalah jumlah iterasi yang telah dilakukan.
+Jumlah total operasi dalam fungsi ini sekitar n^2. Fungsi ini hanya menggunakan ruang tambahan konstan. Oleh karena itu, kompleksitas ruangnya adalah O(1).
+
+Selanjutnya Variabel boolean not_sorted diinisialisasi dengan nilai true untuk menunjukkan bahwa array belum diurutkan. Variabel not_sorted membutuhkan ruang konstan yang tidak bergantung pada ukuran array.
 
 Di dalam sebuah loop while, program akan terus menjalankan langkah-langkah pengurutan selama array masih belum terurut. Pada awal setiap iterasi loop while, not_sorted diatur menjadi false, ini mengasumsikan bahwa array sudah terurut, kecuali jika ditemukan pasangan elemen yang belum terurut. Pada program juga terdapat sebuah loop for di dalamnya yang berfungsi untuk mengiterasi seluruh elemen array. Jika sebuah elemen lebih besar dari elemen yang berada di sebelah kanannya, maka keduanya akan ditukar posisinya, dan not_sorted diatur menjadi true untuk menandakan bahwa array masih belum terurut.
 
-Kemudian Fungsi print_array digunakan untuk mencetak semua elemen array yang diberikan kepadanya.
+Kemudian Fungsi print_array digunakan untuk mencetak semua elemen array yang diberikan kepadanya. Fungsi ini memiliki kompleksitas waktu O(n), di mana n adalah jumlah elemen dalam array. Ini karena fungsi melakukan iterasi melalui setiap elemen dalam array dan mencetaknya. Fungsi ini juga memiliki kompleksitas ruang O(1) karena hanya menggunakan ruang tambahan konstan.
 
-Selanjutnya ada fungsi main. Di dalam fungsi main ini sebuah array a dari bilangan pecahan didefinisikan dengan nilai-nilai awal. Array yang belum diurutkan dicetak menggunakan fungsi print_array. Fungsi bubble_sort dipanggil untuk mengurutkan array tersebut. Dan yang terakhir, array yang sudah diurutkan dicetak kembali menggunakan fungsi print_array.
+Selanjutnya ada fungsi main. Di dalam fungsi main ini sebuah array a dari bilangan pecahan didefinisikan dengan nilai-nilai awal. Array yang belum diurutkan dicetak menggunakan fungsi print_array. Fungsi bubble_sort dipanggil untuk mengurutkan array tersebut. Dan yang terakhir, array yang sudah diurutkan dicetak kembali menggunakan fungsi print_array. Total kompleksitas waktu untuk fungsi main adalah O(n^2) karena dominan oleh panggilan fungsi bubble_sort. Fungsi main juga menggunakan ruang tambahan konstan. Oleh karena itu, kompleksitas ruangnya juga adalah O(1).
 
 
 #### Output:
@@ -93,7 +97,7 @@ Dari output dapat diketahui bahwa bilangan desimal yang semula tidak urut yaitu 
 #### Full code Screenshot:
 <img width="960" alt="Screenshot 2024-03-29 165203" src="https://github.com/OliviaIntan/Praktikum-Struktur-Data-Assignment/assets/162260430/a4020d6c-7f27-4561-bba5-5b5f2dfb7b6c">
 
-Program ini menunjukkan bagaimana bubble sort dapat digunakan untuk mengurutkan array dari bilangan double yaitu bilangan desimal. 
+Program ini menunjukkan bagaimana bubble sort dapat digunakan untuk mengurutkan array dari bilangan double yaitu bilangan desimal. Kompleksitas waktu program secara keseluruhan didominasi oleh kompleksitas waktu dari algoritma Bubble Sort di dalam fungsi bubble_sort. Kompleksitas ruang program keseluruhan sangat kecil dan tetap konstan karena hanya menggunakan ruang tambahan konstan untuk variabel-variabel sementara. Meskipun algoritma Bubble Sort sederhana, kompleksitas waktu yang tinggi membuatnya tidak efisien untuk penggunaan pada array yang besar.
 
 
 ### 2. Guided 2: Mengurutkan karakter secara descending (dari terbesar hingga terkecil) menggunakan Algoritma Insertion Sort
@@ -146,15 +150,16 @@ Program di atas merupakan program untuk mengurutkan mengurutkan sebuah array dar
 
 Berikut adalah penjelasan dari program di atas:
 
-Untuk yang pertama adalah Fungsi insertion_sort yang digunakan untuk melakukan pengurutan array dari karakter. Fungsi ini menerima parameter sebuah array dari karakter (arr) dan panjang array (length).
+Untuk yang pertama adalah Fungsi insertion_sort yang digunakan untuk melakukan pengurutan array dari karakter. Fungsi ini menerima parameter sebuah array dari karakter (arr) dan panjang array (length). Algoritma Insertion Sort memiliki kompleksitas waktu rata-rata O(n^2) dalam kasus terburuk, di mana n adalah jumlah elemen dalam array. Pada setiap iterasi, algoritma memindahkan elemen-elemen yang lebih besar ke posisi yang lebih awal dalam array.
+Dalam fungsi insertion sort, terdapat loop for yang berjalan sebanyak n kali, dan di dalamnya, terdapat loop while yang dalam kasus terburuk dapat berjalan sebanyak i kali, di mana i adalah indeks dalam array. Jumlah total operasi dalam fungsi ini dapat mencapai sekitar n^2. Fungsi ini hanya menggunakan ruang tambahan konstan. Oleh karena itu, kompleksitas ruangnya adalah O(1).
 
 Selanjutnya loop for. Di dalam loop for setiap elemen dari array dimulai dari indeks kedua (indeks 1) hingga akhir array diperiksa. Setiap elemen dipindahkan ke posisi yang tepat di dalam array terurut yang ada di sebelah kiri elemen tersebut. Proses ini dilakukan dengan membandingkan elemen saat ini dengan elemen-elemen yang telah diurutkan sebelumnya.
 
 Kemudian loop while. Di dalam loop while elemen yang sedang diproses dibandingkan dengan elemen-elemen di sebelah kirinya. Jika elemen yang sedang diproses lebih kecil daripada elemen di sebelah kirinya, maka kedua elemen tersebut ditukar posisinya. Proses pertukaran terus dilakukan sampai elemen yang sedang diproses sudah berada di posisi yang tepat di dalam array terurut.
 
-Lalu ada Fungsi print_array. Fungsi ini digunakan untuk mencetak semua elemen array yang diberikan kepadanya.
+Lalu ada Fungsi print_array. Fungsi ini digunakan untuk mencetak semua elemen array yang diberikan kepadanya. Fungsi ini memiliki kompleksitas waktu O(n), di mana n adalah jumlah elemen dalam array. Ini karena fungsi melakukan iterasi melalui setiap elemen dalam array dan mencetaknya. Fungsi ini juga memiliki kompleksitas ruang O(1) karena hanya menggunakan ruang tambahan konstan.
 
-Dan yang terakhir fungsi main. Terdapat beberapa fungsi di dalam fungsi main, yaitu: Sebuah array 'a'dari karakter didefinisikan dengan nilai-nilai awal. Array yang belum diurutkan dicetak menggunakan fungsi print_array. Kemudian Fungsi insertion_sort dipanggil untuk mengurutkan array tersebut. Dan array yang sudah diurutkan dicetak kembali menggunakan fungsi print_array.
+Dan yang terakhir fungsi main. Terdapat beberapa fungsi di dalam fungsi main, yaitu: Sebuah array 'a'dari karakter didefinisikan dengan nilai-nilai awal. Array yang belum diurutkan dicetak menggunakan fungsi print_array. Kemudian Fungsi insertion_sort dipanggil untuk mengurutkan array tersebut. Dan array yang sudah diurutkan dicetak kembali menggunakan fungsi print_array. Total kompleksitas waktu untuk fungsi main adalah O(n^2) karena dominan oleh panggilan fungsi insertion_sort. Fungsi main juga menggunakan ruang tambahan konstan. Oleh karena itu, kompleksitas ruangnya juga adalah O(1).
 
 
 #### Output:
@@ -166,7 +171,7 @@ Dari output dapat diketahui bahwa karakter yang semula tidak urut yaitu c, f, a,
 #### Full code Screenshot:
 <img width="960" alt="Screenshot 2024-03-29 230322" src="https://github.com/OliviaIntan/Praktikum-Struktur-Data-Assignment/assets/162260430/4682d8d6-a8d6-42e8-b256-ac058ac1aa95">
 
-Program ini menunjukkan bagaimana insertion sort dapat digunakan untuk mengurutkan array dari karakter. 
+Program ini menunjukkan bagaimana insertion sort dapat digunakan untuk mengurutkan array dari karakter. Kompleksitas waktu program secara keseluruhan didominasi oleh kompleksitas waktu dari algoritma Insertion Sort di dalam fungsi insertion_sort. Kompleksitas ruang program keseluruhan sangat kecil dan tetap konstan karena hanya menggunakan ruang tambahan konstan untuk variabel-variabel sementara. Algoritma Insertion Sort digunakan dalam implementasi ini untuk mengurutkan array karakter dalam urutan menurun (dari besar ke kecil).
 
 
 ## Unguided 
@@ -230,8 +235,7 @@ Program di atas merupakan program untuk mengurutkan Indeks Prestasi Semester (IP
 
 Berikut adalah penjelasan dari program di atas:
 
-Pertama adalah fungsi SelectionSort. Fungsi ini digunakan untuk mengurutkan array nilai IPS menggunakan algoritma Selection Sort. Fungsi ini menerima array arr yang berisi nilai IPS dan n yang merupakan jumlah elemen dalam array. Pada fungsi SelectionSort, Iterasi dilakukan dari indeks 0 hingga n-2 (indeks terakhir sebelum array habis).
-Di setiap iterasi, dilakukan pencarian elemen terbesar di antara elemen-elemen yang belum diurutkan. Setelah elemen terbesar ditemukan, elemen tersebut ditukar dengan elemen pertama dari sisa array yang belum diurutkan.
+Pertama adalah fungsi SelectionSort. Fungsi ini digunakan untuk mengurutkan array nilai IPS menggunakan algoritma Selection Sort. Fungsi ini menerima array arr yang berisi nilai IPS dan n yang merupakan jumlah elemen dalam array. Pada fungsi SelectionSort, Iterasi dilakukan dari indeks 0 hingga n-2 (indeks terakhir sebelum array habis). Di setiap iterasi, dilakukan pencarian elemen terbesar di antara elemen-elemen yang belum diurutkan. Setelah elemen terbesar ditemukan, elemen tersebut ditukar dengan elemen pertama dari sisa array yang belum diurutkan.
 
 Kedua fungsi printArrayWithCommas. Fungsi ini digunakan untuk mencetak semua elemen dalam array dengan menambahkan tanda koma setelah setiap nilai, kecuali untuk nilai terakhir.
 
@@ -397,7 +401,7 @@ Hasil dari praktikum ketiga ini, saya menjadi tahu mengenai konsep dasar sorting
 
 - Pembelajaran yang didapat
 
-Pada praktikum ini saya kembali mendapat pembelajaran yang banyak dan berarti. Saya bisa lebih mengerti dalam mengimplementasikan program sorting di bahasa pemrograman C++.
+Pada praktikum ini saya kembali mendapat pembelajaran yang banyak dan berarti. Saya bisa lebih mengerti dalam mengimplementasikan program sorting di bahasa pemrograman C++. Pembelajaran lain yang saya dapat yaitu mengenai kompleksitas waktu dan ruang di setiap kode pada algoritma sorting.
 
 ## Referensi
 [1] D. Septyantoro, R.A. Hasibuan, "ANALISIS DAN PERBANDINGAN KOMPLEKSITAS ALGORITMA EXCHANGE SORT DAN INSERTION SORT UNTUK PENGURUTAN DATA MENGGUNAKAN PYTHON", TEKINFO. vol.21, no. 1, pp. 48-50, 1 April 2020.
