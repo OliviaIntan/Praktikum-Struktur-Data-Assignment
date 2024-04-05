@@ -47,14 +47,11 @@ int main() {
     return 0;
 }
 ```
-Program di atas merupakan sebuah program untuk mencari data tertentu pada sebuah array dengan menggunakan Sequential Search. 
-Berikut adalah penjelasannya.
+Program di atas merupakan sebuah program untuk mencari data tertentu pada sebuah array dengan menggunakan Sequential Search. Berikut adalah penjelasannya.
 
 Array "data" pada program di atas berisi bilangan bulat sejumlah "n". Kemudian, variabel "cari" berisi angka yang ingin dicari dalam array. Lalu, variabel "ketemu" digunakan untuk menandai apakah angka yang dicari sudah ditemukan atau belum, yang dimana awalnya diatur sebagai false. Dan terakhir variabel "i" digunakan sebagai indeks pencarian.
 
-Selanjutnya, program di atas melakukan pencarian berurutan dalam array "data" menggunakan perulangan "for". Jika angka yang dicari ditemukan, variabel "ketemu" di awal tadi diubah menjadi "true" dan program keluar dari perulangan lalu program mencetak pesan bahwa "angka tersebut ditemukan pada indeks ke-". Namun sebaliknya, jika angka tidak ditemukan, program mencetak pesan bahwa "tidak dapat ditemukan pada data".
-
-Program kemudian mencetak hasil pencarian menggunakan algoritma Sequential Search.
+Selanjutnya, program di atas melakukan pencarian berurutan dalam array "data" menggunakan perulangan "for". Jika angka yang dicari ditemukan, variabel "ketemu" di awal tadi diubah menjadi "true" dan program keluar dari perulangan lalu program mencetak pesan bahwa "angka tersebut ditemukan pada indeks ke-". Namun sebaliknya, jika angka tidak ditemukan, program mencetak pesan bahwa "tidak dapat ditemukan pada data". Program kemudian mencetak hasil pencarian menggunakan algoritma Sequential Search.
 
 #### Output:
 ![image](https://github.com/OliviaIntan/Praktikum-Struktur-Data-Assignment/assets/162260430/039ff706-58fb-4b51-8f8e-31623d200e88)
@@ -170,7 +167,7 @@ Kesimpulannya, program di atas bertujuan untuk mencari nilai tertentu dalam arra
 ## Unguided 
 
 ### 1. Buatlah sebuah program untuk mencari sebuah huruf pada sebuah kalimat yang sudah di input dengan menggunakan Binary Search!
-- Program
+
 ```C++
 #include <iostream>
 #include <string>
@@ -240,18 +237,13 @@ int main() {
     return 0;
 }
 ```
-- Interpretasi
-
 Program di atas adalah program untuk mencari huruf dalam setiap kata pada kalimat yang diinputkan dengan menggunakan Binary Search. Berikut adalah penjelasannya:
 
-Pertama, program meminta kita untuk memasukkan sebuah kalimat dan kalimat tersebut disimpan dalam variabel "input". Kemudian, program meminta kita untuk memasukkan huruf yang ingin dicari dalam kalimat, lalu huruf tersebut disimpan dalam variabel "target".
+Pertama, kita diminta untuk memasukkan sebuah kalimat dan kalimat tersebut disimpan dalam variabel "input". Setelah itu, kita diminta memasukkan huruf yang ingin dicari dalam kalimat, lalu huruf tersebut disimpan dalam variabel "target". Selanjutnya, program memproses kalimat yang diinputkan menggunakan objek "stringstream". Kalimat-kalimat yang sudah diinputkan kemudian dipisahkan menjadi kata-kata, dan setiap kata disimpan dalam vektor "words".
 
-Selanjutnya, program memproses kalimat yang diinputkan menggunakan objek "stringstream". Kalimat-kalimat yang sudah diinputkan tersebut kemudian dipisahkan menjadi kata-kata, dan setiap kata disimpan dalam vektor "words".
+Kemudian, terdapat fungsi "absolute_index" yang akan menjumlahkan panjang kata-kata sebelum kata yang berisi huruf yang ditemukan, dan juga mengakumulasikan panjang spasi di antara kata-kata tersebut. Namun, ketika huruf yang dicari berada di awal kalimat, program akan mencetak pesan "huruf tidak ditemukan". Hal ini terjadi karena ketika huruf yang dicari berada di awal kalimat, tidak ada spasi sebelumnya, sehingga perhitungan indeks absolut menjadi salah.
 
-Kemudian, terdapat fungsi "absolute_index", fungsi ini digunakan untuk menghitung indeks absolut dari sebuah huruf dalam kalimat dengan memperhitungkan panjang kata-kata sebelumnya. Fungsi "absolute_index" akan menjumlahkan panjang kata-kata sebelum kata yang berisi huruf yang ditemukan dan juga mengakumulasikan panjang spasi di antara kata-kata tersebut. Namun, pada bagian perhitungan indeks absolut ketika huruf yang dicari berada di awal kalimat, maka program akan mencetak pesan "huruf tidak ditemukan". Hal ini terjadi karena ketika huruf yang dicari berada di awal kalimat, tidak ada spasi sebelumnya, sehingga perhitungan indeks absolut menjadi salah.
-
-Setelah memisahkan kata-kata, program melakukan pencarian huruf yang diinginkan ("target") dalam setiap kata menggunakan fungsi "binarySearch".
-Jika huruf ditemukan dalam suatu kata, program mencetak pesan "Huruf ditemukan pada indeks dalam kata" dan "Huruf ditemukan  pada indeks absolut dalam kalimat". Namun sebaliknya, jika huruf tidak ditemukan dalam semua kata, program mencetak pesan bahwa "Huruf tersebut tidak ditemukan dalam kalimat".
+Setelah memisahkan kata-kata, program melakukan pencarian huruf yang diinginkan ("target") dalam setiap kata menggunakan fungsi "binarySearch". Jika huruf ditemukan dalam suatu kata, program mencetak pesan "Huruf ditemukan pada indeks dalam kata" dan "Huruf ditemukan  pada indeks absolut dalam kalimat". Namun, jika huruf tidak ditemukan dalam semua kata, program mencetak pesan "Huruf tersebut tidak ditemukan dalam kalimat".
 
 #### Output:
 ![Screenshot 2024-04-04 104206](https://github.com/OliviaIntan/Praktikum-Struktur-Data-Assignment/assets/162260430/4d5041be-5355-4182-9aa0-65be1ca94b46)
@@ -264,8 +256,6 @@ Dari output tersebut dapat kita ketahui bahwa, saya menginputkan kalimat "hari i
 Kesimpulannya, Binary Search merupakan algoritma pencarian yang efisien digunakan untuk mencari sebuah nilai dalam kumpulan data terurut. Program di atas memberikan hasil yang akurat apabila huruf yang dicari benar-benar terdapat dalam kalimat yang diinputkan. Pada program di atas juga diasumsikan bahwa setiap kata dalam kalimat dianggap sudah terurut.  
 
 ### 2. Buatlah sebuah program yang dapat menghitung banyaknya huruf vocal dalam sebuah kalimat!
-
-- Program
 
 ```C++
 #include <iostream>
@@ -304,14 +294,11 @@ int main() {
     return 0;
 }
 ```
-
-- Interpretasi
-
 Program di atas merupakan sebuah program untuk menghitung banyaknya huruf vocal yang terdapat dalam sebuah kalimat yang diinputkan. Berikut adalah penjelasannya.
 
-Pada program di atas, fungsi "isVowel" digunakan untuk mengecek apakah sebuah karakter adalah huruf vokal atau bukan. Fungsi ini mengembalikan "true" jika karakter yang diberikan adalah salah satu dari huruf vokal yaitu A, I, U, E, O dan mengembalikan "false" jika tidak.
+Pada program di atas, fungsi "isVowel" digunakan untuk mengecek apakah sebuah karakter adalah huruf vokal atau bukan. Fungsi ini mengembalikan "true" jika karakter yang diberikan adalah salah satu dari huruf vokal yaitu A, I, U, E, O dan mengembalikan "false" jika tidak. 
 
-Kemudian terdapat fungsi "countVowels", fungsi ini berfungsi untuk menghitung jumlah huruf vokal dalam sebuah kalimat. Program melakukan iterasi melalui setiap karakter dalam kalimat dan memanggil fungsi "isVowel" untuk setiap karakter yang merupakan huruf. Apabila karakter tersebut adalah huruf vokal, maka jumlah huruf vokal akan ditambahkan.
+Kemudian terdapat fungsi "countVowels" yang berfungsi untuk menghitung jumlah huruf vokal dalam sebuah kalimat. Program melakukan iterasi melalui setiap karakter dalam kalimat dan memanggil fungsi "isVowel" untuk setiap karakter yang merupakan huruf. Apabila karakter tersebut adalah huruf vokal, maka jumlah huruf vokal akan bertambah.
 
 Selanjutnya, di dalam "main" program meminta kita untuk menginputkan sebuah kalimat menggunakan "getline". Lalu, program memanggil fungsi "countVowels" dengan kalimat yang diinputkan kita tadi sebagai argumen. Dan terakhir, hasil jumlah huruf vokal kemudian dicetak.
 
@@ -327,7 +314,6 @@ Kesimpulannya, program di atas merupakan implementasi sederhana untuk menghitung
 
 ### 3. Diketahui data = 9, 4, 1, 4, 7, 10, 5, 4, 12, 4. Hitunglah berapa banyak angka 4 dengan menggunakan algoritma Sequential Search!
 
-- Program
 ```C++
 #include <iostream>
 
@@ -351,10 +337,9 @@ int main() {
     return 0;
 }
 ```
-- Interpretasi
 Program di atas adalah program untuk mencari jumlah angka 4 pada sebudah data dengan menggunakan Sequential Search. Berikut adalah penjelasannya.
 
-Pertama, program mendefinisikan array "data" yang berisi 10 angka, yaitu 9, 4, 1, 4, 7, 10, 5, 4, 12, dan 4. Kemudian terdapat variabel "n" yang berfungsi untuk mengetahui jumlah elemen dalam array "data". Selanjutnya, variabel "cari" yang diinisialisasi dengan angka 4, dimana angka tersebut merupakan angka yang ingin dicari dalam array.
+Pertama, array "data" yang berisi 10 angka, yaitu 9, 4, 1, 4, 7, 10, 5, 4, 12, dan 4 didefinisikan dahulu. Kemudian terdapat variabel "n" yang berfungsi untuk mengetahui jumlah elemen dalam array "data". Selanjutnya, variabel "cari" yang diinisialisasi dengan angka 4, dimana angka tersebut merupakan angka yang ingin dicari dalam array.
 
 Kemudian, untuk mencari setiap kemunculan angka 4 dalam array "data", program menggunakan Sequential Search. Setiap kali angka 4 ditemukan, variabel "count" akan bertambah satu. Lalu setelah selesai mencari, program mencetak jumlah angka 4 yang ditemukan dalam data.
 
