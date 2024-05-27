@@ -17,7 +17,3 @@ int main() {
     cout << "Faktorial dari " << n << " adalah: " << faktorial(n) << endl;
     return 0;
 }
-
-
-
-
