@@ -13,5 +13,11 @@ void CetakElemen(int n) {
 }
 
 void HapusElemen(int n) {
-    
+
+}
+
+int main() {
+    void TambahElemen = n;
+    void CetakElemen = n;
+    void HapusElemen = n;
 }

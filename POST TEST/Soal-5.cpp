@@ -15,4 +15,5 @@ void target(int n) {
 
 int main() {
     cout << "nums = [2, 7, 11, 5]" << target << endl; 
+    cin >> n;
 }
