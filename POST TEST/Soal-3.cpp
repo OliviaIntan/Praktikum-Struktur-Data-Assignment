@@ -3,7 +3,7 @@
 using namespace std;
 
 void BubbleSort(int n) {
-    for (i = n;)
+    cari = n;
 }
 
 void data(int n) {
@@ -11,6 +11,6 @@ void data(int n) {
 }
 
 int main() {
-    cout << "Urutan bilangan secara bubble sort" << cari << endl; 
+    cout << "Data " << cari << " ditemukan pada" <<  endl; 
     return 0;
 }
