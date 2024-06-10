@@ -23,16 +23,16 @@ Keunggulan graph yaitu dapat membantu untuk memeriksa hubungan antar node dengan
 
 ### B. Tree
 ### Pengertian Tree
-Tree (pohon) merupakan salah satu jenis struktur data yang terdiri dari simpul-simpul (nodes) yang saling terhubung (edges) satu sama lain secara hierarkis. Nodes dalam implementadinya dapat merepresentasikan data, sementara edges adalah jalan atau lintasan yang menghubungkan santara nodes [3]. Pohon adalah bentuk khusus dari suatu graf yang banyak diterapkan untuk berbagai keperluan. Misalnya struktur organisasi suatu perusahaan, sislsilah suatu keluarga, skema sistem gugur suatu pertandingan, dan ikatan kimia suatu molekul [4].
+Tree (pohon) merupakan salah satu jenis struktur data yang terdiri dari simpul-simpul (nodes) yang saling terhubung (edges) satu sama lain secara hierarkis. Nodes dalam implementadinya dapat merepresentasikan data, sementara edges adalah jalan atau lintasan yang menghubungkan santara nodes [2]. Pohon adalah bentuk khusus dari suatu graf yang banyak diterapkan untuk berbagai keperluan. Misalnya struktur organisasi suatu perusahaan, sislsilah suatu keluarga, skema sistem gugur suatu pertandingan, dan ikatan kimia suatu molekul [3].
 
 ![image](https://github.com/OliviaIntan/Praktikum-Struktur-Data-Assignment/assets/162260430/4a79ba82-bbfd-4796-a862-2f5723d335cd)
 
-Pada contoh di atas dapat diketahui bahwa A adalah akar (root). Akar A memiliki dua anak (child) yaitu B dan C. B memiliki dua daun (leaf) yaitu D dan E. Begitupun dengan F dan G merupakan daun dari C [3].
+Pada contoh di atas dapat diketahui bahwa A adalah akar (root). Akar A memiliki dua anak (child) yaitu B dan C. B memiliki dua daun (leaf) yaitu D dan E. Begitupun dengan F dan G merupakan daun dari C [2].
 
 ### Binary Tree atau Pohon Biner
 Jika sebuah simpul pada pohon memiliki sebanyak-banyaknya dua anak, pohon tersebut dinamakan pohon biner. 
 
-Dua anak dari tiap simpul pada pohon biner disebut dengan anak kiri dan anak kanan, seperti ditunjukkan pada gambar. Simpul pada pohon biner tidak harus memiliki dua anak; ia bisa hanya memiliki anak kiri saja, atau hanya anak kanan saja, atau simpul juga bisa tidak memiliki anak sama sekali (pada kasus itu, simpul disebut dengan daun) [2].
+Dua anak dari tiap simpul pada pohon biner disebut dengan anak kiri dan anak kanan, seperti ditunjukkan pada gambar. Simpul pada pohon biner tidak harus memiliki dua anak; ia bisa hanya memiliki anak kiri saja, atau hanya anak kanan saja, atau simpul juga bisa tidak memiliki anak sama sekali (pada kasus itu, simpul disebut dengan daun) [4].
 
 ![image](https://github.com/OliviaIntan/Praktikum-Struktur-Data-Assignment/assets/162260430/090f3231-5e58-4b4c-8047-d0ec16007ed0)
 
@@ -60,7 +60,7 @@ a. Memanggil dirinya untuk menjelajah subpohon kiri
 
 b. Memanggil dirinya untuk menjelajah subpohon kanan
 
-c. Mengunjungi simpul [2].
+c. Mengunjungi simpul [4].
 
 ## Langkah Praktikum
 
@@ -596,8 +596,9 @@ Tree adalah struktur data yang menyerupai pohon. Hal ini karena pohon terdiri da
 ## Referensi
 [1] O. Arifin, S.Kom., M.Cs, dkk, Dasar Pemrograman (Teori & Aplikasi), Jambi: PT. Sonpedia Publishing Indonesia, 2023.
 
-[2] V. Siahaan, Buku Resep Algoritma dan Struktur Data dengan Java, Sumatera Utara: Balige Publishing, 2020.
+[2] M. Erkamim, S.Kom., M.Kom, dkk, Buku Ajar Algoritma dan Struktur Data, Indonesia: PT. Sonpedia Publishing Indonesia, 2024.
 
-[3] M. Erkamim, S.Kom., M.Kom, dkk, Buku Ajar Algoritma dan Struktur Data, Indonesia: PT. Sonpedia Publishing Indonesia, 2024.
+[3] Amrullah, Aplikasi Graf Pohon dalam Algoritma Huffman, vol. VI, no. 1, pp. 25, Maret 2011.
 
-[4] Amrullah, Aplikasi Graf Pohon dalam Algoritma Huffman, vol. VI, no. 1, pp. 25, Maret 2011.
+[4] V. Siahaan, Buku Resep Algoritma dan Struktur Data dengan Java, Sumatera Utara: Balige Publishing, 2020.
+
